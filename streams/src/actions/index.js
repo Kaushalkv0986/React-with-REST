@@ -19,7 +19,7 @@ export const signOut = () => {
 export const createStream = formValues => async (dispatch, getState) => {
 
   const userId = getState().auth.userId;
-  const response = await streams.post('/streams', {...formValues, userId});
+  const response = await streams.post('/streams', { ...formValues, userId });
 
   dispatch({
     type: actionTypes.CREATE_STREAM,
@@ -27,7 +27,7 @@ export const createStream = formValues => async (dispatch, getState) => {
   });
 
   /*Programmatically Navigating user to home screen after creating a stream */
-  browserHistory.push('/'); 
+  browserHistory.push('/');
 };
 
 export const fetchStreams = () => async dispatch => {
@@ -46,11 +46,17 @@ export const editStream = (id, formValues) => async dispatch => {
   const response = await streams.patch(`/streams/${id}`, formValues);
 
   dispatch({ type: actionTypes.EDIT_STREAM, payload: response.data });
+
+  /*Programmatically Navigating user to home screen after creating a stream */
+  browserHistory.push('/');
 };
 
 export const deleteStream = (id) => async dispatch => {
   await streams.delete(`/streams/${id}`);
 
   dispatch({ type: actionTypes.DELETE_STREAM, payload: id });
+
+  /*Programmatically Navigating user to home screen after creating a stream */
+  browserHistory.push('/');
 };
 
