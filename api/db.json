@@ -1,0 +1,32 @@
+{
+  "streams": [
+    {
+      "title": "title",
+      "description": "desc",
+      "id": 1
+    },
+    {
+      "title": "This is title",
+      "description": "this is description",
+      "id": 2
+    },
+    {
+      "title": "Title of the stream",
+      "description": "Description of the stream ",
+      "userId": "109874670500501151168",
+      "id": 3
+    },
+    {
+      "title": "Programmatic navigation",
+      "description": "We will use Router component instead of BrowserRouter if we want to use own history object instead,       This will ease the process of doing programmatic navigation",
+      "userId": "109874670500501151168",
+      "id": 4
+    },
+    {
+      "title": "Reusing the component.",
+      "description": "Reusing the component by creating a streamform component and using in streamecreate component.",
+      "userId": "109874670500501151168",
+      "id": 5
+    }
+  ]
+}
